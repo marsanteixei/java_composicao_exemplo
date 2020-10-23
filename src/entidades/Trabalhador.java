@@ -5,6 +5,7 @@ import java.util.Calendar;
 import java.util.List;
 
 public class Trabalhador {
+ private String codigo;
  private String nome;
  private NivelTrabalhador nivel;
  private double baseSalario;
@@ -13,11 +14,18 @@ public class Trabalhador {
  public Trabalhador() {
 	 
  }
- public Trabalhador(String nome, NivelTrabalhador nivel, double baseSalario, Departamento dep) {
-		this.nome = nome;
+ public Trabalhador(String codigo, String nome, NivelTrabalhador nivel, double baseSalario, Departamento dep) {
+		this.codigo=codigo;
+	    this.nome = nome;
 		this.nivel = nivel;
 		this.baseSalario = baseSalario;
 		this.dep = dep;
+	}
+ public String getCodigo() {
+		return codigo;
+	}
+public void setCodigo(String codigo) {
+		this.codigo = codigo;
 	}
 public String getNome() {
 	return nome;
@@ -62,5 +70,5 @@ public double quantoGanhou(int ano, int mes) {
 	}
 	return soma;
 }
- 
+
 }
